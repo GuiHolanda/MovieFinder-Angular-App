@@ -1,0 +1,34 @@
+<header>
+  <div class="header">
+    <div class="header__brand">
+      <a href="#">MovieFinder</a>
+    </div>
+    <ul
+      class="header__nav"
+      role="menu"
+      aria-labelledby="navButton"
+      id="navMenu"
+      (click)="toggleNavOpen()"
+      [ngClass]="{ open: isNavOpen }"
+    >
+      <li class="header__nav__item">
+        <a role="menuitem" href="#">Home</a>
+      </li>
+      <li class="header__nav__item">
+        <a role="menuitem" href="#">Favorites</a>
+      </li>
+      <li class="header__nav__item">
+        <a role="menuitem" href="#">Logout</a>
+      </li>
+    </ul>
+    <button
+      id="navButton"
+      aria-haspopup="true"
+      aria-controls="navMenu"
+      class="btn"
+      (click)="toggleNavOpen()"
+    >
+      <i class="bi bi-list fs-2"></i>
+    </button>
+  </div>
+</header>

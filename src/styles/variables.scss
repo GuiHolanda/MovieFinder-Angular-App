@@ -1,0 +1,32 @@
+$primary-backgroud-gradiente: linear-gradient(to right, #141e30, #243b55);
+$light: #7697bd56;
+
+$light-text-color: rgb(216, 213, 213);
+
+$heading-font-family: "Spectral", serif;
+$heading-font-size-lg: 3.25rem;
+$heading-font-size-md: 2.25rem;
+$heading-font-size-sm: 1.5rem;
+
+$body-font-family: "Raleway", sans-serif;
+$body-font-size-lg: 1.25rem;
+$body-font-size-md: 1rem;
+$body-font-size-sm: 0.75rem;
+
+:root {
+  --primary-backgroud-gradient: #{$primary-backgroud-gradiente};
+
+  --light: #{$light};
+
+  --light-text-color: #{$light-text-color};
+
+  --heading-font: #{heading-font-family};
+  --heading-font-size-lg: #{$heading-font-size-lg};
+  --heading-font-size-md: #{$heading-font-size-md};
+  --heading-font-size-sm: #{$heading-font-size-sm};
+
+  --body-font: #{$body-font-family};
+  --body-font-size-lg: #{$body-font-size-lg};
+  --body-font-size-md: #{$body-font-size-md};
+  --body-font-size-sm: #{$body-font-size-sm};
+}

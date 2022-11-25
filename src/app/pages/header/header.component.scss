@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4px 1rem;
+  background-image: var(--primary-backgroud-gradient);
+  color: var(--light-text-color);
+  position: relative;
+
+  &__brand {
+    font-family: var(--heading-font);
+    font-size: var(--heading-font-size-sm);
+    flex-grow: 4;
+    @media only screen and (min-width: 700px) {
+      font-size: var(--heading-font-size-md);
+    }
+  }
+
+  .header__nav {
+    position: absolute;
+    right: 100%;
+    opacity: 0;
+    top: 100%;
+    z-index: 10;
+    width: 100%;
+    background-image: var(--primary-backgroud-gradient);
+    text-align: center;
+    transition: right 100ms, opacity 100ms;
+
+    &.open {
+      right: 0;
+      opacity: 1;
+    }
+
+    @media only screen and (min-width: 700px) {
+      position: static;
+      opacity: 1;
+      display: flex;
+      flex-grow: 6;
+      gap: 4px;
+      background-image: none;
+      height: 100%;
+      width: fit-content;
+      align-items: center;
+    }
+
+    &__item {
+      font-family: var(--body-font);
+      font-size: var(--body-font-size-md);
+      padding: 4px 8px;
+      cursor: pointer;
+
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: var(--light);
+      }
+
+      @media only screen and (min-width: 700px) {
+        font-size: var(--body-font-size-lg);
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  .btn {
+    color: inherit;
+    @media only screen and (min-width: 700px) {
+      display: none;
+    }
+  }
+}

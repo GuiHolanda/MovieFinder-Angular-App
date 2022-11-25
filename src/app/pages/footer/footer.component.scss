@@ -1,0 +1,54 @@
+.footer {
+  background-image: var(--primary-backgroud-gradient);
+  color: var(--light-text-color);
+  padding: 4px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  &__links {
+    display: flex;
+    width: 100%;
+    border-bottom: 0.75px solid rgba(180, 179, 179, 0.664);
+    flex-direction: column;
+    padding: 4px 0;
+    gap: 8px;
+    padding-bottom: 8px;
+    align-items: center;
+
+    @media only screen and (min-width: 700px) {
+      flex-direction: row;
+      gap: 0;
+    }
+
+    .brand {
+      font-family: var(--heading-font);
+      font-size: var(--body-font-size-md);
+      flex-grow: 5;
+      text-align: center;
+      @media only screen and (min-width: 700px) {
+        font-size: var(--heading-font-size-sm);
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-grow: 5;
+      gap: 1rem;
+      justify-content: center;
+
+      @media only screen and (min-width: 700px) {
+        font-size: var(--body-font-size-lg);
+      }
+
+      li:hover {
+        transform: scale(105%);
+      }
+    }
+  }
+
+  p {
+    font-size: var(--body-font-size-sm);
+  }
+}
