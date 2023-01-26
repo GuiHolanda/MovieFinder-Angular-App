@@ -3,7 +3,7 @@ $light: #7697bd56;
 
 $light-text-color: rgb(216, 213, 213);
 
-$heading-font-family: "Spectral", serif;
+$heading-font-family: "Lobster";
 $heading-font-size-lg: 3.25rem;
 $heading-font-size-md: 2.25rem;
 $heading-font-size-sm: 1.5rem;
@@ -20,12 +20,14 @@ $body-font-size-sm: 0.75rem;
 
   --light-text-color: #{$light-text-color};
 
-  --heading-font: #{heading-font-family};
+  --heading-font: #{$heading-font-family};
+
   --heading-font-size-lg: #{$heading-font-size-lg};
   --heading-font-size-md: #{$heading-font-size-md};
   --heading-font-size-sm: #{$heading-font-size-sm};
 
   --body-font: #{$body-font-family};
+
   --body-font-size-lg: #{$body-font-size-lg};
   --body-font-size-md: #{$body-font-size-md};
   --body-font-size-sm: #{$body-font-size-sm};

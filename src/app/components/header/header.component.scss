@@ -10,7 +10,7 @@
   &__brand {
     font-family: var(--heading-font);
     font-size: var(--heading-font-size-sm);
-    flex-grow: 4;
+    flex-grow: 1;
     @media only screen and (min-width: 700px) {
       font-size: var(--heading-font-size-md);
     }
@@ -36,7 +36,6 @@
       position: static;
       opacity: 1;
       display: flex;
-      flex-grow: 6;
       gap: 4px;
       background-image: none;
       height: 100%;
