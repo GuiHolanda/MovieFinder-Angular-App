@@ -4,15 +4,36 @@
       Find out a bunch of curious information about any movie you like
     </h1>
   </div>
-  <div class="col-sm-5 mb-3 mb-sm-0">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Movie Title" />
+</section>
+<form
+  [formGroup]="searchMovieForm"
+  (ngSubmit)="onSubmit()"
+  class="needs-validation"
+  novalidate
+>
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-5 mb-3 mb-sm-0">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="movieTitle"
+          placeholder="Movie Title"
+          required
+        />
+      </div>
+    </div>
+    <div class="col-5 col-sm-2 d-grid">
+      <button class="btn btn-success">Search</button>
+    </div>
+    <div class="col-5 col-sm-2 d-grid">
+      <button
+        class="btn btn-danger"
+        type="button"
+        (click)="onClearButtonClick()"
+      >
+        Clear
+      </button>
     </div>
   </div>
-  <div class="col-5 col-sm-2 d-grid">
-    <button class="btn btn-success">Search</button>
-  </div>
-  <div class="col-5 col-sm-2 d-grid">
-    <button class="btn btn-danger">Clear</button>
-  </div>
-</section>
+</form>
