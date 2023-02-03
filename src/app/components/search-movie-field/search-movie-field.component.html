@@ -5,27 +5,30 @@
     </h1>
   </div>
 </section>
-<form
-  [formGroup]="searchMovieForm"
-  (ngSubmit)="onSubmit()"
-  class="needs-validation"
-  novalidate
->
-  <div class="row d-flex justify-content-center">
+
+<form [formGroup]="searchMovieForm" (ngSubmit)="onSubmit()">
+  <div class="row align-items-start d-flex justify-content-center">
     <div class="col-sm-5 mb-3 mb-sm-0">
       <div class="form-group">
         <input
           type="text"
           class="form-control"
+          [ngClass]="{
+            'is-invalid':
+              isFormSubmittedWithErrors &&
+              searchMovieForm.controls.movieTitle.errors
+          }"
           formControlName="movieTitle"
           placeholder="Movie Title"
-          required
         />
+        <div class="invalid-feedback">Please, enter a movie title</div>
       </div>
     </div>
+
     <div class="col-5 col-sm-2 d-grid">
       <button class="btn btn-success">Search</button>
     </div>
+
     <div class="col-5 col-sm-2 d-grid">
       <button
         class="btn btn-danger"

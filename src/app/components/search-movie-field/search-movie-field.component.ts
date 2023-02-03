@@ -16,23 +16,28 @@ export class SearchMovieFieldComponent implements OnInit {
   constructor(private store: Store<AppState>) {}
 
   searchMovieForm: FormGroup = new FormGroup({
-    movieTitle: new FormControl(null),
+    movieTitle: new FormControl(null, Validators.required),
   });
+  isFormSubmittedWithErrors = false;
 
   ngOnInit(): void {}
 
   onSubmit() {
     const isValidInput = this.searchMovieForm.valid;
     console.log(isValidInput);
+    console.log(this.searchMovieForm);
     if (isValidInput) {
       const movieTitle = this.searchMovieForm.get('movieTitle')!.value;
       this.store.dispatch(getCurrentMovieAction({ movieTitle }));
-      this.searchMovieForm.setValue({ movieTitle: '' });
+      this.searchMovieForm.reset();
+      this.isFormSubmittedWithErrors = false;
+    } else {
+      this.isFormSubmittedWithErrors = true;
     }
   }
 
   onClearButtonClick() {
-    this.searchMovieForm.setValue({ movieTitle: '' });
+    this.searchMovieForm.reset();
     this.store.dispatch(clearCurrentMovieAction());
   }
 }
