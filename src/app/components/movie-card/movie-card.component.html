@@ -1,0 +1,61 @@
+<section class="d-flex justify-content-center">
+  <div *ngIf="movie.Response === 'True'" class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          [src]="movie.Poster"
+          class="d-block w-100 rounded-start"
+          [alt]="'Poster - ' + movie.Title"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{ movie.Title }}</h2>
+          <hr />
+          <p class="card-text">
+            {{ movie.Plot }}
+          </p>
+          <hr />
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Write(s): </strong>{{ movie.Writer }}
+            </li>
+            <li class="list-group-item">
+              <strong>Director(s): </strong>{{ movie.Director }}
+            </li>
+            <li class="list-group-item">
+              <strong>Actor(s): </strong>{{ movie.Actors }}
+            </li>
+            <li class="list-group-item">
+              <strong>Runtime: </strong>{{ movie.Runtime }}
+            </li>
+            <li class="list-group-item">
+              <strong>Country(ies): </strong>{{ movie.Country }}
+            </li>
+            <li class="list-group-item">
+              <strong>language(s): </strong>{{ movie.Language }}
+            </li>
+            <li class="list-group-item">
+              <strong>Genre(s): </strong>{{ movie.Genre }}
+            </li>
+            <li class="list-group-item">
+              <strong>Year: </strong>{{ movie.Year }}
+            </li>
+            <li class="list-group-item">
+              <strong>Imdb Rating: </strong>{{ movie.imdbRating }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="movie.Response === 'False'"
+    class="alert alert-danger d-flex w-50 gap-3 justify-content-center align-items-center"
+    role="alert"
+  >
+    <i class="bi bi-exclamation-triangle"></i>
+    <div>Movie not found, please enter another movie title</div>
+  </div>
+</section>

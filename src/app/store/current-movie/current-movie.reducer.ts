@@ -17,7 +17,7 @@ const inicialState: IMovie = {
   Language: '',
   Director: '',
   Writer: '',
-  Response: false,
+  Response: undefined,
   imdbRating: '',
 };
 

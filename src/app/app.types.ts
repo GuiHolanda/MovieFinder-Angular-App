@@ -10,6 +10,6 @@ export interface IMovie {
   Language: string;
   Director: string;
   Writer: string;
-  Response: boolean;
+  Response: string | undefined;
   imdbRating: string;
 }

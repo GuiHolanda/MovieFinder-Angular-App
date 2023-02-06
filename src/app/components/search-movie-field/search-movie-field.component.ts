@@ -24,8 +24,6 @@ export class SearchMovieFieldComponent implements OnInit {
 
   onSubmit() {
     const isValidInput = this.searchMovieForm.valid;
-    console.log(isValidInput);
-    console.log(this.searchMovieForm);
     if (isValidInput) {
       const movieTitle = this.searchMovieForm.get('movieTitle')!.value;
       this.store.dispatch(getCurrentMovieAction({ movieTitle }));
